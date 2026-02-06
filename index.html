@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Food Madagascar | Producteur & Exportateur de Vanille</title>
+    <meta name="description" content="Exportateur de vanille de Madagascar certifiée. 5 tonnes par an, tracabilité totale, normes BPA/BPH. Vanille bourbon, cacao et poivre sauvage.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="video-bg">
+        <video autoplay muted loop playsinline poster="Sambava3.jpg">
+            <source src="Vidéo_de_paysage_drone_SAVA.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="logo">CHALLENGE FOOD</div>
+        <div class="status">SAVA, MADAGASCAR</div>
+    </header>
+
+    <nav class="quick-nav">
+        <button onclick="rotateTo(0)" class="active-btn" id="btn-0">Accueil</button>
+        <button onclick="rotateTo(-60)" id="btn-1">Nos Produits</button>
+        <button onclick="rotateTo(-120)" id="btn-2">Chiffres Clés</button>
+        <button onclick="rotateTo(-180)" id="btn-3">Qualité & BPH</button>
+        <button onclick="rotateTo(-240)" id="btn-4">Expertise Vanille</button>
+        <button onclick="rotateTo(-300)" id="btn-5">Engagement</button>
+    </nav>
+
+    <main class="viewport">
+        <div class="world" id="mainWorld">
+
+            <section class="page page-1">
+                <div class="content glass">
+                    <h1>L'Excellence de la Vanille Bourbon</h1>
+                    <p class="subtitle">Producteur & Exportateur depuis Sambava</p>
+                    <p class="description">
+                        Au cœur de la région SAVA, <strong>Challenge Food</strong> cultive l'art de la <strong>vanille naturelle</strong>. 
+                        Un pont direct entre le terroir malgache et les exigences européennes.
+                    </p>
+                    <button class="btn-primary" onclick="rotateTo(-60)">Découvrir la collection</button>
+                </div>
+            </section>
+
+            <section class="page page-2">
+                <div class="content glass scroll-content">
+                    <h2>Notre Collection Premium</h2>
+                    <div class="product-list">
+                        <div class="product-card">
+                            <img src="01 vanille gousses (1).jpg" alt="Gousses de vanille Madagascar">
+                            <div class="prod-text">
+                                <h3>Vanille Gourmet</h3>
+                                <p>Gousses noires non fendues, taux d'humidité optimal. Notes crémeuses et cacaotées.</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="POIVRE+NOIR+1.jpg" alt="Poivre Noir Madagascar">
+                            <div class="prod-text">
+                                <h3>Poivre de la SAVA</h3>
+                                <p>Poivre noir et <strong>Poivre Sauvage</strong> (Voatsiperifery) séchés naturellement.</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="poudre-de-cacao.jpg" alt="Cacao Poudre Madagascar">
+                            <div class="prod-text">
+                                <h3>Cacao Fin</h3>
+                                <p>Fèves et poudre pour les chocolatiers exigeants. Arôme profond.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page page-3">
+                <div class="content glass">
+                    <h2>Challenge Food en Chiffres</h2>
+                    <p class="intro-text">Une croissance maîtrisée au service de la qualité depuis 2022.</p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="number">2022</span>
+                            <span class="label">Lancement Export</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number">5 T</span>
+                            <span class="label">Vanille Travaillée / An</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number">100%</span>
+                            <span class="label">Clients Satisfaits</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="number">EU</span>
+                            <span class="label">Normes Europe</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page page-4">
+                <div class="content glass scroll-content">
+                    <h2>Protocoles & Sécurité</h2>
+                    <div class="quality-step">
+                        <h3>🌱 BPA (Bonnes Pratiques Agricoles)</h3>
+                        <p>Sélection rigoureuse des lianes, pollinisation manuelle et récolte à pleine maturité uniquement.</p>
+                    </div>
+                    <div class="quality-step">
+                        <h3>hygiène BPH (Bonnes Pratiques d'Hygiène)</h3>
+                        <p>Nos centres d'affinage respectent des normes sanitaires strictes (tenue, nettoyage, stockage) pour garantir une vanille saine.</p>
+                    </div>
+                    <div class="quality-step">
+                        <h3>🔍 Traçabilité Totale</h3>
+                        <p>De la parcelle du planteur jusqu'au carton d'export. Chaque lot est numéroté et suivi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page page-5">
+                <div class="content glass">
+                    <h2>La Vraie Vanille vs Synthèse</h2>
+                    <div class="comparison">
+                        <div class="comp-col bio">
+                            <h3>Vanille Plantée (Naturelle)</h3>
+                            <ul>
+                                <li>Plus de <strong>200 molécules</strong> aromatiques.</li>
+                                <li>Complexité, rondeur et longueur en bouche.</li>
+                                <li>Culture durable soutenant des familles.</li>
+                            </ul>
+                        </div>
+                        <div class="comp-col synth">
+                            <h3>Vanilline (Synthétique)</h3>
+                            <ul>
+                                <li>Une seule molécule (dérivée du pétrole ou bois).</li>
+                                <li>Goût plat, sans profondeur.</li>
+                                <li>Aucun impact positif sur le terroir.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="pastry-note"><em>"Pour la haute pâtisserie, seule la gousse offre cette signature aromatique inimitable."</em></p>
+                </div>
+            </section>
+
+            <section class="page page-6">
+                <div class="content glass">
+                    <h2>Notre Engagement Communautaire</h2>
+                    <img src="12.jpg" class="feat-img" alt="Enfants école Madagascar ErEDD">
+                    <div class="engagement-text">
+                        <h3>Programme ErEDD</h3>
+                        <p>Nous investissons dans l'<strong>Éducation relative à l'Environnement</strong>. Création d'écoles et sensibilisation des jeunes générations à Sambava.</p>
+                    </div>
+                    <div class="news-ticker">
+                        <h4>Dernières Nouvelles :</h4>
+                        <a href="#">Campagne 2025-2026 : Ouverture officielle & tarifs</a>
+                    </div>
+                    <a href="mailto:contact@challengefood.mg" class="btn-primary full-width">Demander un Devis Export</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        const world = document.getElementById('mainWorld');
+        let currentDeg = 0;
+
+        function rotateTo(deg) {
+            currentDeg = deg;
+            // Rotation sur l'axe Y pour l'effet carrousel horizontal
+            // TranslateZ éloigne les faces pour créer le cercle
+            world.style.transform = `translateZ(-140vw) rotateY(${deg}deg)`;
+            
+            // Mise à jour des boutons actifs
+            document.querySelectorAll('.quick-nav button').forEach(btn => btn.classList.remove('active-btn'));
+            const index = Math.abs(deg / 60) % 6; // Calcul simple pour trouver l'index
+            const btnId = `btn-${index}`;
+            if(document.getElementById(btnId)) {
+                document.getElementById(btnId).classList.add('active-btn');
+            }
+        }
+
+        // Navigation au clavier (Flèches)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "ArrowRight") rotateTo(currentDeg - 60);
+            if (e.key === "ArrowLeft") rotateTo(currentDeg + 60);
+        });
+
+        // Navigation à la molette (Scroll)
+        let isScrolling = false;
+        window.addEventListener('wheel', (e) => {
+            if (isScrolling) return;
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, 800); // Anti-rebond
+
+            if (e.deltaY > 0) rotateTo(currentDeg - 60);
+            else rotateTo(currentDeg + 60);
+        });
+    </script>
+</body>
+</html>
