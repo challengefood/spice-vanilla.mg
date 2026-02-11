@@ -1,0 +1,142 @@
+:root{
+  --primary:#2b1d0e;
+  --secondary:#4a6741;
+  --accent:#d4a056;
+  --bg:#f7f6f2;
+  --text:#2f2f2f;
+  --white:#fff;
+  --border:#e8e2d7;
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--primary)}
+img{max-width:100%;display:block}
+button{font:inherit;border:none;background:none;cursor:pointer}
+a{text-decoration:none;color:inherit}
+
+/* langues */
+body.lang-fr .en-content{display:none!important}
+body.lang-fr .fr-content{display:block!important}
+body.lang-en .fr-content{display:none!important}
+body.lang-en .en-content{display:block!important}
+
+/* navbar */
+.navbar{
+  position:fixed;top:0;left:0;right:0;height:78px;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 5%;background:rgba(247,246,242,.96);
+  border-bottom:1px solid var(--border);backdrop-filter:blur(8px);
+}
+.brand{display:flex;align-items:center;gap:10px;background:none;border:none}
+.brand-logo{width:48px;height:48px;object-fit:contain;border-radius:8px}
+.brand-text strong{display:block;font-size:.95rem;line-height:1;color:var(--primary)}
+.brand-text span{display:block;font-weight:700;line-height:1.1}
+
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-btn{
+  padding:9px 14px;border-radius:999px;font-weight:600;font-size:.82rem;color:var(--primary)
+}
+.nav-btn:hover{background:#efe9dc}
+.nav-btn.active{background:var(--primary);color:#fff}
+.lang-switch{
+  margin-left:10px;padding:9px 14px;border:1px solid var(--primary);border-radius:999px;font-size:.8rem;font-weight:700
+}
+.lang-switch:hover{background:var(--primary);color:#fff}
+
+.burger{
+  display:none;width:44px;height:44px;border:1px solid var(--border);border-radius:10px;
+  align-items:center;justify-content:center;flex-direction:column;gap:5px
+}
+.burger span{width:20px;height:2px;background:var(--primary)}
+.burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.active span:nth-child(2){opacity:0}
+.burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* pages cachées */
+.page{display:none;min-height:calc(100vh - 78px);padding-top:98px}
+.page.active{display:block}
+.container{width:min(1200px,92%);margin:0 auto}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title span{color:var(--accent);text-transform:uppercase;font-size:.8rem;font-weight:700;letter-spacing:2px}
+.section-title h2{margin-top:8px;font-size:clamp(1.8rem,3.4vw,2.7rem)}
+
+/* hero */
+.hero{
+  min-height:calc(100vh - 78px);
+  border-radius:18px;overflow:hidden;width:min(1280px,96%);margin:0 auto;
+  background:
+    linear-gradient(120deg, rgba(43,29,14,.78), rgba(74,103,65,.55)),
+    url("35441089096_26be13c1a4_k-e1499870530578-1024x673.jpg") center/cover no-repeat;
+}
+.hero-content{color:#fff;text-align:center;max-width:900px;margin:0 auto;padding:110px 20px 70px}
+.hero-content h1{color:#fff;font-size:clamp(2rem,5vw,3.7rem);margin-bottom:18px}
+.hero-content p{font-size:clamp(1rem,2.1vw,1.2rem);margin-bottom:24px}
+.hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;
+  padding:12px 22px;border-radius:10px;font-weight:700
+}
+.btn-outline{background:transparent;border:1.5px solid #fff}
+.btn-outline:hover{background:#fff;color:var(--primary)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:repeat(3,minmax(230px,1fr));gap:18px}
+.about-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+.about-card i{font-size:1.4rem;color:var(--accent);margin-bottom:10px}
+
+/* products */
+.carousel-wrapper{display:flex;align-items:center;justify-content:center;gap:10px}
+.carousel-nav{
+  width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--border);
+  display:grid;place-items:center;box-shadow:var(--shadow)
+}
+.carousel-track{width:min(760px,88vw);min-height:380px}
+.product-slide{display:none}
+.product-slide.active{display:block}
+.slide-image-wrap{
+  background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;
+  box-shadow:var(--shadow);height:420px
+}
+.slide-image-wrap img{width:100%;height:100%;object-fit:cover}
+.carousel-dots{margin-top:16px;display:flex;gap:10px;justify-content:center}
+.dot{width:12px;height:12px;border-radius:50%;border:1px solid var(--accent)}
+.dot.active{background:var(--accent)}
+.product-info-card{
+  margin:20px auto 0;width:min(760px,92vw);background:#fff;border:1px solid var(--border);
+  border-radius:14px;padding:20px;box-shadow:var(--shadow)
+}
+.prod-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.prod-tags li{
+  list-style:none;background:#f5efe2;border:1px solid #e9dcc2;color:#5a4423;padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:600
+}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+.contact-item{margin-top:16px}
+.form-card input,.form-card textarea{
+  width:100%;border:1px solid #ddd;border-radius:10px;padding:11px 12px;margin-bottom:10px
+}
+.form-card button{width:100%}
+
+footer{text-align:center;padding:22px 10px 26px;color:#6d6559;border-top:1px solid var(--border);font-size:.9rem}
+
+/* responsive */
+@media (max-width:980px){
+  .about-grid{grid-template-columns:1fr 1fr}
+  .slide-image-wrap{height:370px}
+}
+@media (max-width:768px){
+  .navbar{height:72px;padding:10px 4%}
+  .page{padding-top:90px;min-height:calc(100vh - 72px)}
+  .burger{display:flex}
+  .nav-links{
+    position:absolute;top:72px;right:4%;width:min(290px,92vw);display:none;flex-direction:column;
+    background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px;box-shadow:var(--shadow)
+  }
+  .nav-links.show{display:flex}
+  .nav-btn,.lang-switch{width:100%;text-align:left;margin-left:0}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .slide-image-wrap{height:290px}
+}

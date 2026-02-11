@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Challenge Food Export | Vanilla & Spices</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-fr">
+  <!-- NAV -->
+  <nav class="navbar">
+    <button class="brand" id="brandHome" type="button" aria-label="Retour accueil">
+      <img src="LOGO CF.png" alt="Challenge Food Export Logo" class="brand-logo">
+      <div class="brand-text">
+        <strong>CHALLENGE FOOD</strong>
+        <span>Export</span>
+      </div>
+    </button>
+
+    <button class="burger" id="burgerBtn" type="button" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <button class="nav-btn active" data-page="home" type="button">
+        <span class="fr-content">Accueil</span>
+        <span class="en-content">Home</span>
+      </button>
+      <button class="nav-btn" data-page="about" type="button">
+        <span class="fr-content">À propos</span>
+        <span class="en-content">About</span>
+      </button>
+      <button class="nav-btn" data-page="products" type="button">
+        <span class="fr-content">Produits</span>
+        <span class="en-content">Products</span>
+      </button>
+      <button class="nav-btn" data-page="contact" type="button">
+        <span class="fr-content">Contact</span>
+        <span class="en-content">Contact</span>
+      </button>
+
+      <button class="lang-switch" id="langSwitch" type="button">
+        <span class="fr-content">EN</span>
+        <span class="en-content">FR</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HOME -->
+  <main id="home" class="page active">
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="fr-content">L’excellence de la vanille malgache</h1>
+        <h1 class="en-content">The excellence of Malagasy vanilla</h1>
+
+        <p class="fr-content">
+          Producteur & exportateur premium depuis la région SAVA vers les marchés internationaux.
+        </p>
+        <p class="en-content">
+          Premium producer & exporter from SAVA region to international markets.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn" type="button" data-page="products">
+            <span class="fr-content">Voir nos produits</span>
+            <span class="en-content">View our products</span>
+          </button>
+          <button class="btn btn-outline" type="button" data-page="contact">
+            <span class="fr-content">Demander un devis</span>
+            <span class="en-content">Request a quote</span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </main>
+
+  <!-- PAGE ABOUT -->
+  <section id="about" class="page">
+    <div class="container">
+      <div class="section-title">
+        <span class="fr-content">Notre Histoire</span>
+        <span class="en-content">Our Story</span>
+        <h2 class="fr-content">À propos de Challenge Food</h2>
+        <h2 class="en-content">About Challenge Food</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fa-solid fa-seedling"></i>
+          <h3 class="fr-content">Une initiative ambitieuse</h3>
+          <h3 class="en-content">An ambitious initiative</h3>
+          <p class="fr-content">
+            Challenge Food est née de l’initiative d’un natif malgache, en partenariat avec un italien,
+            avec un premier export de <strong>100 kg en 2021</strong>.
+          </p>
+          <p class="en-content">
+            Challenge Food was born from the initiative of a Malagasy native, in partnership with an Italian,
+            with a first export of <strong>100 kg in 2021</strong>.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <i class="fa-solid fa-award"></i>
+          <h3 class="fr-content">Exigence qualité</h3>
+          <h3 class="en-content">Quality rigor</h3>
+          <p class="fr-content">
+            Aujourd’hui, l’entreprise est incontournable grâce à sa sévérité sur la qualité,
+            la traçabilité et la conformité export.
+          </p>
+          <p class="en-content">
+            Today, the company is recognized for strict quality standards,
+            traceability and export compliance.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <h3 class="fr-content">Partenariats certifiés</h3>
+          <h3 class="en-content">Certified partnerships</h3>
+          <p class="fr-content">
+            Nous travaillons avec des coopératives certifiées <strong>USDA NOP</strong> et <strong>Fairtrade</strong>.
+          </p>
+          <p class="en-content">
+            We work with producer cooperatives certified <strong>USDA NOP</strong> and <strong>Fairtrade</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE PRODUCTS -->
+  <section id="products" class="page">
+    <div class="container">
+      <div class="section-title">
+        <span class="fr-content">Catalogue Premium</span>
+        <span class="en-content">Premium Catalog</span>
+        <h2 class="fr-content">Nos produits</h2>
+        <h2 class="en-content">Our products</h2>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav prev" id="prevBtn" type="button" aria-label="Précédent">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track">
+          <article class="product-slide active" data-index="0">
+            <div class="slide-image-wrap">
+              <img src="01 vanille gousses (1).jpg" alt="Vanille Bourbon">
+            </div>
+          </article>
+
+          <article class="product-slide" data-index="1">
+            <div class="slide-image-wrap">
+              <img src="POIVRE+NOIR+1.jpg" alt="Poivre Noir">
+            </div>
+          </article>
+
+          <article class="product-slide" data-index="2">
+            <div class="slide-image-wrap">
+              <img src="R.jpeg" alt="Cacao">
+            </div>
+          </article>
+        </div>
+
+        <button class="carousel-nav next" id="nextBtn" type="button" aria-label="Suivant">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots">
+        <button class="dot active" data-index="0" type="button"></button>
+        <button class="dot" data-index="1" type="button"></button>
+        <button class="dot" data-index="2" type="button"></button>
+      </div>
+
+      <div class="product-info-card">
+        <h3 id="prodTitleFr" class="fr-content"></h3>
+        <h3 id="prodTitleEn" class="en-content"></h3>
+        <p id="prodDescFr" class="fr-content"></p>
+        <p id="prodDescEn" class="en-content"></p>
+        <ul id="prodTags" class="prod-tags"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE CONTACT -->
+  <section id="contact" class="page">
+    <div class="container">
+      <div class="section-title">
+        <span class="fr-content">Parlons Affaires</span>
+        <span class="en-content">Let's Talk Business</span>
+        <h2 class="fr-content">Contactez-nous</h2>
+        <h2 class="en-content">Contact us</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Challenge Food SARL</h3>
+          <p>Sambava, Madagascar</p>
+
+          <div class="contact-item">
+            <h4>Email</h4>
+            <a href="mailto:commercial.export@cfood.store">commercial.export@cfood.store</a>
+          </div>
+
+          <div class="contact-item">
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/261322549937" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> +261 32 25 499 37
+            </a>
+            <a href="https://wa.me/393200759103" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> +39 320 075 9103
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-card form-card" onsubmit="event.preventDefault(); alert('Message enregistré.');">
+          <h3 class="fr-content">Envoyer un message</h3>
+          <h3 class="en-content">Send a message</h3>
+          <input type="text" placeholder="Nom / Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea rows="5" placeholder="Message..." required></textarea>
+          <button type="submit" class="btn">
+            <span class="fr-content">Envoyer</span>
+            <span class="en-content">Send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Challenge Food SARL — All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
